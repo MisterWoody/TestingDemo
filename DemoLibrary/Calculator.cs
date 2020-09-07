@@ -10,10 +10,6 @@ namespace DemoLibrary
     {
         public static double Add(double x, double y) => x + y;
 
-        //{
-        //    return x + y;
-        //}
-
         public static double Subtract(double x, double y)
         {
             return x - y;
