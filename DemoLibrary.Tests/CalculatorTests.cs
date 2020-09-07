@@ -10,6 +10,18 @@ namespace DemoLibrary.Tests
 {
     public class CalculatorTests
     {
+
+        [Fact]
+        public void Add_SimpleValuesShouldSum()
+        {
+            // Arrange
+            double expected = 5;
+            // Act
+            double actual = Calculator.Add(3, 2);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
         [Theory]
         [InlineData(4,3,7)]
         [InlineData(21, 5.25, 26.25)]
