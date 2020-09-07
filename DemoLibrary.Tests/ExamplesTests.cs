@@ -23,7 +23,7 @@ namespace DemoLibrary.Tests
         public void ExampleLoadTextFile_InvalidNameShouldFail()
         {
             // Assert.Throws<ArgumentException>("file", () => Examples.ExampleLoadTextFile(""));
-            Assert.Throws<FileNotFoundException>(() => Examples.ExampleLoadTextFile(""));
+            Assert.Throws<Exception>(() => Examples.ExampleLoadTextFile(""));
         }
     }
 }
