@@ -39,5 +39,23 @@ namespace DemoLibrary.Tests
 
             Assert.Throws<ArgumentException>(param, () => DataAccess.AddPersonToPeopleList(people, newPerson));
         }
+
+        [Fact]
+        public void ConvertModelsToCSV_ShouldPass()
+        {
+            PersonModel tim = new PersonModel { FirstName = "Tim", LastName = "Corey" };
+            PersonModel sue = new PersonModel { FirstName = "Sue", LastName = "Storm" };
+            List<PersonModel> people = new List<PersonModel>();
+            people.Add(tim);
+            people.Add(sue);
+            var expected = "Tim,Corey";
+
+            // Action
+            var peopleAsStrings = DataAccess.ConvertModelsToCSV(people);
+
+            // Assert
+            Assert.True(peopleAsStrings.Count == 2);
+            Assert.Contains(expected, peopleAsStrings);
+        }
     }
 }
