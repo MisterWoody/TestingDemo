@@ -24,6 +24,7 @@ namespace DemoLibrary
             // It also means that the new method can have error checking in place to prevent attempts to add a person with empty firstname or lastname
             AddPersonToPeopleList(people, person);
 
+            // add a variable to allow easier debugging as we can then capture the contents of the conversion method
             List<string> lines = ConvertModelsToCSV(people);
 
             File.WriteAllLines(personTextFile, lines);
