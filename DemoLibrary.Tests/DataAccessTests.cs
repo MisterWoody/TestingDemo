@@ -14,6 +14,9 @@ namespace DemoLibrary.Tests
         [Fact]
         public void AddPersonToPeopleList_ShouldWork()
         {
+            // Create a list of personmodel for our test, exercise the method and assert that 
+            // 1 - the number of person model entries in the list is one
+            // 2 - the person list contains our newly added test person
             PersonModel newPerson = new PersonModel { FirstName = "Tim", LastName = "Corey" };
             List<PersonModel> people = new List<PersonModel>();
 
