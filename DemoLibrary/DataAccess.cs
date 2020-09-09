@@ -19,6 +19,9 @@ namespace DemoLibrary
         {
             List<PersonModel> people = GetAllPeople();
 
+            // Where this may have been part of this method as a simple people.Add(person) call - refactor out to a separate method
+            // This means that the AddNewPerson method has one less responsibility as this is now delegated to its own method
+            // It also means that the new method can have error checking in place to prevent attempts to add a person with empty firstname or lastname
             AddPersonToPeopleList(people, person);
 
             List<string> lines = ConvertModelsToCSV(people);
