@@ -31,6 +31,9 @@ namespace DemoLibrary.Tests
         [InlineData("", "Corey", "FirstName")]
         public void AddPersonToPeopleList_ShouldFail(string firstName, string lastName, string param)
         {
+
+            // Business logic test - if either the firstname or lastname of a person is null or empty
+            // then throw an argument exception.
             PersonModel newPerson = new PersonModel { FirstName = firstName, LastName = lastName };
             List<PersonModel> people = new List<PersonModel>();
 
