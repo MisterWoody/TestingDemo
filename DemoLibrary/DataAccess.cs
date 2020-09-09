@@ -44,6 +44,9 @@ namespace DemoLibrary
             people.Add(person);
         }
 
+        // The list of person models can be turned into a separate method to return a lsit of string (in csv format) again by
+        // introducing a separate method - the original lsit creation and loop refactored from the add person to people method to this new method
+        // again reducing the number of responsibilities in the add person to people method
         public static List<string> ConvertModelsToCSV(List<PersonModel> people)
         {
             List<string> output = new List<string>();
